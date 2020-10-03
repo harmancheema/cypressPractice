@@ -2,11 +2,11 @@
 Practice tests for Cypress
 
 To open cypress, you can run
-'npx cypress open'
+`npx cypress open`
 or
-'npm run cy:open'
+`npm run cy:open`
 
 To run tests, you can run
-'npx cypress run' 
+`npx cypress run`
 or
-'npm run cy:run'
+`npm run cy:run`
