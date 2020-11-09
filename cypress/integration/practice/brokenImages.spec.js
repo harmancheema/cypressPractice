@@ -15,22 +15,14 @@ describe('Broken Images', () => {
     })
     
     it('Heading present', () => {
-        // Define heading
-        let heading = brokenImage.heading()
-        
         // Verify heading exists
-        heading.should('exist')
+        brokenImage.heading().contains('Broken Images')
     })
 
     it('Images', () => {
-        // Define images
-        let image1 = brokenImage.image1()
-        let image2 = brokenImage.image2()
-        let image3 = brokenImage.image3()
-
         // Verify images exist
-        image1.should('exist')
-        image2.should('exist')
-        image3.should('exist')
+        brokenImage.image1().should('exist')
+        brokenImage.image2().should('exist')
+        brokenImage.image3().should('exist')
     })
 })

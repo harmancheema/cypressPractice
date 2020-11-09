@@ -15,72 +15,54 @@ describe('Disappearing Elements', () => {
     })
 
     it('Heading exists', () => {
-        // Define heading
-        let heading = elements.heading()
-
         // Verify heading exists
-        heading.should('exist')
+        elements.heading().contains('Disappearing Elements')
     })
 
     it('Paragraph exists', () => {
-        // Define Paragraph
-        let paragraph = elements.paragraph()
-
         // Verify heading exists
-        paragraph.should('exist')
+        elements.paragraph().should('exist')
     })
 
     it('Home tab', () => {
-        // Define tab
-        let home = elements.home()
-
         // Verify tab exists
-        home.should('exist')
+        elements.home().should('exist')
 
         // Click on Home
-        home.click()
+        elements.home().click()
 
         // Verify user is back on previous page
         cy.url().should("include", "https://the-internet.herokuapp.com/")
     })
 
     it('About tab', () => {
-        // Define tab
-        let about = elements.about()
-
         // Verify tab exists
-        about.should('exist')
+        elements.about().should('exist')
 
         // Click on About
-        about.click()
+        elements.about().click()
 
         // Verify user is on the right screen
         cy.url().should('include', 'about')
     })
 
     it('Contact Us tab', () => {
-        // Define tab
-        let contactUs = elements.contactUs()
-
         // Verify tab exists
-        contactUs.should('exist')
+        elements.contactUs().should('exist')
 
         // Click on contact us
-        contactUs.click()
+        elements.contactUs().click()
 
         // Verify user is on the right screen
         cy.url().should('include', 'contact-us')
     })
 
     it('Portfolio tab', () => {
-        // Define tab
-        let portfolio = elements.portfolio()
-
         // Verify tab exists
-        portfolio.should('exist')
+        elements.portfolio().should('exist')
 
         // Click on Portfolio
-        portfolio.click()
+        elements.portfolio().click()
 
         // Verify user is on the right screen
         cy.url().should('include', 'portfolio')

@@ -15,32 +15,23 @@ describe('Dropdown Menu', () => {
     })
 
     it('Heading exists', () => {
-        // Define heading
-        let heading = dropdownMenu.heading()
-
         // Verify heading exists
-        heading.should('exist')
+        dropdownMenu.heading().contains('Dropdown List')
     })
 
     it('Select Option 1', () => {
-        // Define dropdown menu
-        let dropdown = dropdownMenu.dropdownMenu()
-
         // Click dropdown menu
-        dropdown.select('Option 1')
+        dropdownMenu.dropdownMenu().select('Option 1')
 
         // Verify Option 1 selected
-        dropdown.should('have.value', '1')
+        dropdownMenu.dropdownMenu().should('have.value', '1')
     })
 
     it('Select Option 2', () => {
-        // Define dropdown menu
-        let dropdown = dropdownMenu.dropdownMenu()
-
         // Click dropdown menu
-        dropdown.select('Option 2')
+        dropdownMenu.dropdownMenu().select('Option 2')
 
         // Verify Option 2 selected
-        dropdown.should('have.value', '2')
+        dropdownMenu.dropdownMenu().should('have.value', '2')
     })
 })

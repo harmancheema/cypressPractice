@@ -15,18 +15,12 @@ describe('A/B Test', () => {
     })
 
     it('Heading present', () => {
-        // Define heading
-        let heading = ab.heading()
-
         // Verify heading exists
-        heading.should('exist')
+        ab.heading().contains('A/B')
     })
 
     it('Paragraph present', () => {
-        // Define paragraph
-        let paragraph = ab.paragraph()
-
         // Verify paragraph exists
-        paragraph.should('exist')
+        ab.paragraph().should('exist')
     })
 })

@@ -15,30 +15,21 @@ describe('Checkboxes', () => {
     })
 
     it('Heading exists', () => {
-        // Define heading
-        let heading = checkbox.heading()
-
         // Verify heading existss
-        heading.should('exist')
+        checkbox.heading().contains('Checkboxes')
     })
 
     it('Select/unselect checkbox 1', () => {
-        // Define checkbox 1
-        let checkbox1 = checkbox.checkbox1()
-
         // Verify unselect/select checkbox1
-        checkbox1
+        checkbox.checkbox1()
             .should('not.be.checked')
             .check()
             .should('be.checked')
     })
 
     it('Unselect/select checkbox 2', () => {
-        // Define checkbox 2
-        let checkbox2 = checkbox.checkbox2()
-
         // Verify selected/unselected checkbox2
-        checkbox2
+        checkbox.checkbox2()
             .should('be.checked')
             .uncheck()
             .should('not.be.checked')

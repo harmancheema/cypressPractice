@@ -15,44 +15,29 @@ describe('Add/Remove Elements', () => {
       })
 
     it('Heading present', () => {
-        // Define heading
-        let heading = addRemove.heading()
-
         // Verify heading exists
-        heading.should('exist')
+        addRemove.heading().contains('Add/Remove Elements')
     })
 
     it('Add Element', () => {
-        // Define add button
-        let addButton = addRemove.addElement()
-
         // Verify add button exists
-        addButton.should('exist')
+        addRemove.addElement().should('exist')
 
         // Press add button
-        addButton.click()
-
-        // Define delete button
-        let deleteButton = addRemove.deleteElement()
+        addRemove.addElement().click()
 
         // Verify delete button exists
-        deleteButton.should('exist')
+        addRemove.deleteElement().should('exist')
     })
 
     it('Delete Element', () => {
-        // Define add button
-        let addButton = addRemove.addElement()
-
         // Press add button
-        addButton.click()
-
-        // Define delete button
-        let deleteButton = addRemove.deleteElement()
+        addRemove.addElement().click()
 
         // Press delete button
-        deleteButton.click()
+        addRemove.deleteElement().click()
 
         // Verify delete button does not exist
-        deleteButton.should('not.exist')
+        addRemove.deleteElement().should('not.exist')
     })
 })

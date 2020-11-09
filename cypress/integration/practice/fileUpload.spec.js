@@ -16,11 +16,8 @@ describe('File Upload', () => {
     })
 
     it('Heading exists', () => {
-        // Define heading
-        let heading = fileUploader.heading()
-
         // Verify heading exists
-        heading.should('exist')
+        fileUploader.heading().contains('File Uploader')
     })
 
     it('File Upload', () => {

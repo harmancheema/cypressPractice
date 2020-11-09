@@ -15,26 +15,17 @@ describe('Challenging DOM', () => {
     })
 
     it('Heading exists', () => {
-        // Define heading
-        let heading = challengingDom.heading()
-
         // Verify heading exists
-        heading.should('exist')
+        challengingDom.heading().contains('Challenging DOM')
     })
 
     it('Paragraph exists', () => {
-        // Define paragraph
-        let paragraph = challengingDom.paragraph()
-
         // Verify paragraph exists
-        paragraph.should('exist')
+        challengingDom.paragraph().should('exist')
     })
 
     it('Table exists', () => {
-        // Define table 
-        let table = challengingDom.table()
-
         // Verify table exists
-        table.should('exist')
+        challengingDom.table().should('exist')
     })
 })

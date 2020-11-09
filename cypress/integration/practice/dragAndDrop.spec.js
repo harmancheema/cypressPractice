@@ -15,26 +15,17 @@ describe('Drag And Drop Elements', () => {
     })
 
     it('Heading exists', () => {
-        // Define heading
-        let heading = dragAndDropElements.heading()
-
         // Verify heading exists
-        heading.should('exist')
+        dragAndDropElements.heading().contains('Drag and Drop')
     })
 
     it('Move element A', () => {
-        // Define elements
-        let elementA = dragAndDropElements.elementA()
-
         // Verify element A exists
-        elementA.should('exist')
+        dragAndDropElements.elementA().should('exist')
     })
 
     it('Move element B', () => {
-        // Define elements
-        let elementB = dragAndDropElements.elementB()
-
         // Verify element A exists
-        elementB.should('exist')
+        dragAndDropElements.elementB().should('exist')
     })
 })
