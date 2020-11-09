@@ -36,5 +36,7 @@ describe('Context Menu', () => {
 
         // Click in the designated area
         hotspot.rightclick()
+
+        // To-do -> Accept the alert (alert does not show)
     })
 })
